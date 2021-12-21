@@ -1,4 +1,3 @@
-// this is ment for if you want to save your video after making. WARNING, EFFECTS PREVIEW WINDOW VOICES!
 var hideHTMLBox = function() {
         window.close();
     };
