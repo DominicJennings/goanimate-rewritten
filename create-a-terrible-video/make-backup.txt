@@ -137,7 +137,7 @@ function proceedWithFullscreenStudio() {
         }, {
             movieOwner: "", movieOwnerId: "", movieId: "", ut: "-1",
             movieLid: "8", movieTitle: "", movieDesc: "", userId: "", username: "", uemail: "",
-            apiserver: "https://goanimatewrapperu.herokuapp.com/", thumbnailURL: "", copyable: "0", isPublished: "0", ctc: "go", tlang: "en_US", is_private_shared: "0",
+            apiserver: "https://goanimatewrapper-europe.herokuapp.com/", thumbnailURL: "", copyable: "0", isPublished: "0", ctc: "go", tlang: "en_US", is_private_shared: "0",
             autostart: "1", appCode: "go", is_slideshow: "0", originalId: "0", is_emessage: "0", isEmbed: "0", refuser: "",
             utm_source: "", uid: "", isTemplate: "1", showButtons: "0", chain_mids: "", showshare: "0", averageRating: "",
                         s3base: "https://s3.amazonaws.com/fs.goanimate.com/",
