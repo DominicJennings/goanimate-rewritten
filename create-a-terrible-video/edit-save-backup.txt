@@ -1,0 +1,177 @@
+/* this is ment for if you want to edit your video if you made any mistakes. ONLY USE IF YOU USED THE MAKE VIDEO CODE JAVASCRIPT THAT ALLOWS YOU TO SAVE! THIS ALSO EFFECTS THE
+VOICES IN THE PREVIEW WINDOW! */
+var hideHTMLBox = function() {
+        window.close();
+    };
+
+    function tutorialStarted() {
+    }
+    function tutorialStep(sn) {
+    }
+    function tutorialCompleted() {
+    }
+
+    var enable_full_screen = true;
+
+    var studio_data = {
+        id: "Studio",
+        swf: "https://vyondlegacyoffical.herokuapp.com/static/animation/go_full.swf",
+        width: "100%",
+        height: "100%",
+
+        align: "middle",
+        allowScriptAccess: "always",
+        allowFullScreen: "true",
+        wmode: "window",
+
+        hasVersion: "10.3"
+    };
+
+    if (!enable_full_screen) {
+        studio_data.width  = 960;
+        studio_data.height  = 630;
+        resize_studio = false;
+    }
+
+studio_data.flashvars = {"presaveId":"/*number goes here.*/","movieId":"/*number goes here.*/","loadas":0,"asId":"","originalId":"","apiserver":"https:\/\/goanimatewrapper-europe.herokuapp.com\/","storePath":"https:\/\/vyondlegacyoffical.herokuapp.com\/static\/store\/<store>","clientThemePath":"https:\/\/vyondlegacyoffical.herokuapp.com\/static\/<client_theme>","animationPath":"https:\/\/vyondlegacyoffical.herokuapp.com\/static\/animation\/","userId":"0VLx9lDwEqAA","username":"GoAnimate Rewrui","uemail":"lhp73672@pdold.com","numContact":"0","ut":23,"ve":false,"isEmbed":0,"nextUrl":"\/movie\/<movieId>\/0\/1","bgload":"https:\/\/vyondlegacyoffical.herokuapp.com\/static\/animation\/go_full.swf","lid":"12","ctc":"go","themeColor":"silver","tlang":"en_US","siteId":"12","templateshow":"false","forceshow":"false","appCode":"go","lang":"en","tmcc":"192","fb_app_url":"https:\/\/josephcrosmanplays532.github.io\/","is_published":"1","is_private_shared":"0","upl":1,"role":"teacher","hb":"1","pts":"0","msg_index":"","ad":0,"has_asset_bg":0,"has_asset_char":0,"initcb":"studioLoaded","retut":0,"s3base":"https:\/\/s3.amazonaws.com\/fs.goanimate.com\/","st":"","uisa":0,"u_info_school":"OjI6blIwOGZwQl93Q1FiaTJVOHZvektGZzNfVjJnZXRaaXBaMjY1TW9jTVBLeEFHUzk0aDhOWXVpRlRpdk5XcGpMN29Xd1NESURIaHlyNFZLRXpwczUyY29KR3RpQWJ2cUN0U21wWDh3T080WnUxYm9icHJBYlQ4PQ==","tm":"FIN","tray":"custom","uplp":1,"isWide":1};
+
+var _ccad = null;
+
+function proceedWithFullscreenStudio() {
+    // These should be executed only when we are really ready to show the studio
+    window.onbeforeunload = function(e) {
+        var e = e || window.event;
+        var msg = null;
+        if (loadedFullscreenStudio && studioApiReady) {
+            msg = 'You are about to lose all your unsaved changes in the studio.';
+        }
+        if (e && msg != null) {
+            e.returnValue = msg;
+        }
+
+        if (msg != null) {
+            return msg;
+        }
+    };
+
+    $('div#studioBlock').css('height', '0px');
+    $('#studio_holder').flash(studio_data);
+    full_screen_studio();
+
+    ajust_studio();
+}
+
+
+    var studioApiReady = false;
+    var videoTutorial = null;
+
+    function studioLoaded() {
+        studioApiReady = true;
+        $(document).trigger('studioApiReady');
+    };
+    $(document).ready(function() {
+        if (enable_full_screen) {
+
+            if (!true) {
+                $('#studio_container').css('top', '0px');
+            }
+            $('#studio_container').show();
+            $('.site-footer').hide();
+            $('#studioBlock').css('height', '1800px');
+
+            if (false) {
+                checkCopyMovie('javascript:proceedWithFullscreenStudio()', '');
+            } else if (false) {
+                checkEditMovie('');
+            } else {
+                proceedWithFullscreenStudio();
+            }
+
+            $(window).on('resize', function() {
+                ajust_studio();
+            });
+            $(window).on('studio_resized', function() {
+                if (show_cc_ad) {
+                    _ccad.refreshThumbs();
+                }
+            });
+
+            if (studioApiReady) {
+                var api = studioApi($('#studio_holder'));
+                api.bindStudioEvents();
+            }
+            $('.ga-importer').prependTo($('#studio_container'));
+        } else {
+            $('#studioBlock').flash(studio_data);
+        }
+        // Video Tutorial
+        videoTutorial = new VideoTutorial($("#video-tutorial"));
+    })
+    // restore studio when upsell overlay hidden
+    .on('hidden', '#upsell-modal', function(e) {
+        if ($(e.target).attr('id') == 'upsell-modal') {
+            restoreStudio();
+        }
+    })
+    .on('studioApiReady', function() {
+        var api = studioApi($('#studio_holder'));
+        api.bindStudioEvents();
+    })
+    jQuery("#previewPlayerContainer, #video-tutorial").hide();
+
+    function initPreviewPlayer(dataXmlStr, startFrame) {
+        savePreviewData(dataXmlStr);
+
+        if (typeof startFrame == 'undefined') {
+            startFrame = 1;
+        } else {
+            startFrame = Math.max(1, parseInt(startFrame));
+        }
+
+        previewSceen();
+        jQuery("#previewPlayerContainer").show();
+
+        createPreviewPlayer("playerdiv", {
+            height: 360,
+            width: 640,
+            player_url: "https://vyondlegacyoffical.herokuapp.com/static/animation/player.swf",
+            quality: "high"
+        }, {
+            movieOwner: "", movieOwnerId: "", movieId: "", ut: "-1",
+            movieLid: "8", movieTitle: "", movieDesc: "", userId: "", username: "", uemail: "",
+            apiserver: "https://goanimatewrapper-europe.herokuapp.com/", thumbnailURL: "", copyable: "0", isPublished: "0", ctc: "go", tlang: "en_US", is_private_shared: "0",
+            autostart: "1", appCode: "go", is_slideshow: "0", originalId: "0", is_emessage: "0", isEmbed: "0", refuser: "",
+            utm_source: "", uid: "", isTemplate: "1", showButtons: "0", chain_mids: "", showshare: "0", averageRating: "",
+                        s3base: "https://s3.amazonaws.com/fs.goanimate.com/",
+                        ratingCount: "", fb_app_url: "https://josephcrosmanplays532.github.io/", numContact: 0, isInitFromExternal: 1, storePath: "https://vyondlegacyoffical.herokuapp.com/static/store/<store>", clientThemePath: "https://vyondlegacyoffical.herokuapp.com/static/<client_theme>", animationPath: "https://vyondlegacyoffical.herokuapp.com/static/animation",
+            startFrame: startFrame
+        });
+    }
+    function switchBackToStudio() {
+        try {
+            (jQuery("#previewPlayerContainer #Player").get(0) || {pause:function(){}}).pause();
+        } catch (err) {};
+        jQuery("#previewPlayerContainer").hide();
+        restoreStudio();
+        document.getElementById("Studio").onExternalPreviewPlayerCancel();
+    }
+    function publishStudio() {
+        try {
+            (jQuery("#previewPlayerContainer #Player").get(0) || {pause:function(){}}).pause();
+        } catch (err) {};
+        jQuery("#previewPlayerContainer").hide();
+        restoreStudio();
+        document.getElementById("Studio").onExternalPreviewPlayerPublish();
+    }
+    function exitStudio(share) {
+        loadedFullscreenStudio = false;
+    }
+
+    VideoTutorial.tutorials.composition = {
+        title: 'Composition Tutorial',
+        wistiaId: 'nuy96pslyp',
+    };
+    VideoTutorial.tutorials.enterexit = {
+        title: 'Enter and Exit Effects Tutorial',
+        wistiaId: 'fvjsa3jnzc',
+    }
