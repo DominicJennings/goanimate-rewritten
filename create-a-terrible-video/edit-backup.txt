@@ -1,4 +1,5 @@
-// this is ment for if you want to edit your video if you made any mistakes. ONLY USE IF YOU USED THE MAKE VIDEO CODE JAVASCRIPT THAT ALLOWS YOU TO SAVE!
+/* this is ment for if you want to edit your video if you made any mistakes. ONLY USE IF YOU USED THE MAKE VIDEO CODE JAVASCRIPT THAT ALLOWS YOU TO SAVE! THIS ALSO EFFECTS THE
+VOICES IN THE PREVIEW WINDOW! */
 var hideHTMLBox = function() {
         window.close();
     };
