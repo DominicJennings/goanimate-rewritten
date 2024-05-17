@@ -32,7 +32,7 @@ var hideHTMLBox = function() {
         resize_studio = false;
     }
 
-studio_data.flashvars = {"movieId":"/*number goes here.*/","loadas":0,"asId":"","originalId":"","apiserver":"https:\/\/goanimatewrapper-europe.herokuapp.com\/","storePath":"https:\/\/vyondlegacyoffical.herokuapp.com\/static\/store\/<store>","clientThemePath":"https:\/\/vyondlegacyoffical.herokuapp.com\/static\/<client_theme>","animationPath":"https:\/\/vyondlegacyoffical.herokuapp.com\/static\/animation\/","userId":"0VLx9lDwEqAA","username":"GoAnimate Rewrui","uemail":"lhp73672@pdold.com","numContact":"0","ut":23,"ve":false,"isEmbed":0,"nextUrl":"\/movie\/<movieId>\/0\/1","bgload":"https:\/\/vyondlegacyoffical.herokuapp.com\/static\/animation\/go_full.swf","lid":"12","ctc":"go","themeColor":"silver","tlang":"en_US","siteId":"12","templateshow":"false","forceshow":"false","appCode":"go","lang":"en","tmcc":"192","fb_app_url":"https:\/\/dominicjennings.github.io\/","is_published":"1","is_private_shared":"0","upl":1,"role":"teacher","hb":"1","pts":"0","msg_index":"","ad":0,"has_asset_bg":0,"has_asset_char":0,"initcb":"studioLoaded","retut":0,"s3base":"https:\/\/s3.amazonaws.com\/fs.goanimate.com\/","st":"","uisa":0,"u_info_school":"OjI6blIwOGZwQl93Q1FiaTJVOHZvektGZzNfVjJnZXRaaXBaMjY1TW9jTVBLeEFHUzk0aDhOWXVpRlRpdk5XcGpMN29Xd1NESURIaHlyNFZLRXpwczUyY29KR3RpQWJ2cUN0U21wWDh3T080WnUxYm9icHJBYlQ4PQ==","tm":"FIN","tray":"custom","uplp":1,"isWide":1};
+studio_data.flashvars = {"presaveId":"/*number goes here.*/","movieId":"/*number goes here.*/","loadas":0,"asId":"","originalId":"","apiserver":"https:\/\/goanimate-2024-08be738a448a.herokuapp.com\/","storePath":"https:\/\/goanimate-2024-08be738a448a.herokuapp.com\/static\/store\/<store>","clientThemePath":"https:\/\/goanimate-2024-08be738a448a.herokuapp.com\/static\/<client_theme>","animationPath":"https:\/\/goanimate-2024-08be738a448a.herokuapp.com\/static\/animation\/","userId":"0VLx9lDwEqAA","username":"GoAnimate Rewrui","uemail":"lhp73672@pdold.com","numContact":"0","ut":30,"ve":false,"isEmbed":0,"nextUrl":"\/movie\/<movieId>\/0\/1","bgload":"https:\/\/goanimate-2024-08be738a448a.herokuapp.com\/static\/animation\/go_full.swf","lid":"12","ctc":"go","themeColor":"silver","tlang":"en_US","siteId":"go","templateshow":"false","forceshow":"false","appCode":"go","lang":"en","tmcc":"192","fb_app_url":"https:\/\/dominicjennings.github.io\/","is_published":"1","is_private_shared":"0","upl":1,"role":"teacher","hb":"1","pts":"0","msg_index":"","ad":0,"has_asset_bg":0,"has_asset_char":0,"initcb":"studioLoaded","retut":0,"s3base":"https:\/\/s3.amazonaws.com\/fs.goanimate.com\/","st":"","uisa":0,"u_info_school":"OjI6blIwOGZwQl93Q1FiaTJVOHZvektGZzNfVjJnZXRaaXBaMjY1TW9jTVBLeEFHUzk0aDhOWXVpRlRpdk5XcGpMN29Xd1NESURIaHlyNFZLRXpwczUyY29KR3RpQWJ2cUN0U21wWDh3T080WnUxYm9icHJBYlQ4PQ==","tm":"FIN","tray":"custom","uplp":1,"isWide":1};
 
 var _ccad = null;
 
@@ -136,13 +136,13 @@ function proceedWithFullscreenStudio() {
             player_url: "https://dominicjennings.github.io/animation/414827163ad4eb60/player.swf",
             quality: "high"
         }, {
-            movieOwner: "", movieOwnerId: "", movieId: "", ut: "-1",
+            movieOwner: "", movieOwnerId: "", movieId: "", ut: "30",
             movieLid: "8", movieTitle: "", movieDesc: "", userId: "", username: "", uemail: "",
-            apiserver: "https://goanimatewrapper-europe.herokuapp.com/", thumbnailURL: "", copyable: "0", isPublished: "0", ctc: "go", tlang: "en_US", is_private_shared: "0",
+            apiserver: "https://goanimate-2024-08be738a448a.herokuapp.com/", thumbnailURL: "", copyable: "0", isPublished: "0", ctc: "go", tlang: "en_US", is_private_shared: "0",
             autostart: "1", appCode: "go", is_slideshow: "0", originalId: "0", is_emessage: "0", isEmbed: "0", refuser: "",
             utm_source: "", uid: "", isTemplate: "1", showButtons: "0", chain_mids: "", showshare: "0", averageRating: "",
                         s3base: "https://s3.amazonaws.com/fs.goanimate.com/",
-                        ratingCount: "", fb_app_url: "https://josephcrosmanplays532.github.io/", numContact: 0, isInitFromExternal: 1, storePath: "https://vyondlegacyoffical.herokuapp.com/static/store/<store>", clientThemePath: "https://vyondlegacyoffical.herokuapp.com/static/<client_theme>", animationPath: "https://vyondlegacyoffical.herokuapp.com/static/animation",
+                        ratingCount: "", fb_app_url: "https://dominicjennings.github.io/", numContact: 0, isInitFromExternal: 1, storePath: "https://goanimate-2024-08be738a448a.herokuapp.com/static/store/<store>", clientThemePath: "https://goanimate-2024-08be738a448a.herokuapp.com/static/<client_theme>", animationPath: "https://goanimate-2024-08be738a448a.herokuapp.com/static/animation",
             startFrame: startFrame
         });
     }
