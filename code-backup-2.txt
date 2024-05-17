@@ -14,4 +14,4 @@ $('#char_creator_client').flash({
 
    hasVersion: "10.3",
 
-   flashvars: {"apiserver":"https:\/\/goanimatewrapper-europe.herokuapp.com\/","m_mode":"school","bs":character,"isLogin":"Y","isEmbed":"0","ctc":"go","tlang":"en_US","storePath":"https:\/\/vyondlegacyoffical.herokuapp.com\/static\/store\/<store>","clientThemePath":"https:\/\/vyondlegacyoffical.herokuapp.com\/static\/<client_theme>","appCode":"go","page":"","siteId":"go","userId":"00EDZP3Cu0aw","themeId":"family","ut":30}});
+   flashvars: {"apiserver":"https:\/\/goanimate-2024-08be738a448a.herokuapp.com\/","m_mode":"school","bs":character,"isLogin":"Y","isEmbed":"0","ctc":"go","tlang":"en_US","storePath":"https:\/\/goanimate-2024-08be738a448a.herokuapp.com\/static\/store\/<store>","clientThemePath":"https:\/\/goanimate-2024-08be738a448a.herokuapp.com\/static\/<client_theme>","appCode":"go","page":"","siteId":"go","userId":"00EDZP3Cu0aw","themeId":"family","ut":30}});
